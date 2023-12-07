@@ -1,0 +1,147 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.tooltip {
+    position: fixed;
+    color: black;
+    background-color: lightgray;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.header {
+    width: 100%;
+    padding: 20px;
+    color: white;
+    background-color: rgb(50, 50, 50);
+    margin-bottom: 20px;
+}
+
+.content {
+    width: 80%;
+    margin: 0 auto;
+}
+
+table {
+    width: 80%;
+    min-width: 600px;
+    margin: auto;
+    margin-top: 20px;
+    margin-bottom: 40px;
+    border: 2px solid gray;
+    border-collapse: collapse;
+}
+
+tr,
+td {
+    padding: 5px;
+    border-top: 2px solid gray;
+    transition: color, background-color .2s ease;
+}
+
+.entry:hover {
+    cursor: pointer;
+    color: white;
+    background-color: rgb(140, 0, 0);
+}
+
+th {
+    color: white;
+    text-align: start;
+    padding: 5px;
+    border: 2px solid gray;
+    background-color: rgb(40, 40, 40);
+    cursor: pointer;
+}
+
+.message-box {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.confirm-box {
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+    padding: 20px;
+    background-color: goldenrod;
+    color: rgb(40, 40, 40);
+    border-radius: 20px;
+}
+
+.btn-confirm {
+    display: flex;
+    justify-content: space-around;
+}
+
+.btn-confirm button {
+    width: 48%;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    transition: background-color .2s ease;
+}
+
+.btn-yes:hover {
+    background-color: brown;
+}
+
+.btn-no:hover {
+    background-color: green;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    min-width: 200px;
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 10px gray;
+}
+
+.add-form label {
+    font-family: 'Poppins', sans-serif;
+}
+
+.add-form input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    box-shadow: 0px 0px 10px lightgray;
+}
+
+.add-form input[type=submit] {
+    color: white;
+    font-weight: bold;
+    font-size: 12pt;
+    background-color: teal;
+    cursor: pointer;
+    transition: background-color .2s ease;
+}
+
+.add-form input[type=submit]:hover {
+    background-color: rgb(0, 160, 160);
+}
+
+.result-row {
+    font-size: 14pt;
+    font-weight: bold;
+    background-color: lightgrey;
+}
+
+.result-row td {
+    text-align: right;
+    border: 2px solid black;
+}
