@@ -12,12 +12,10 @@ class Data {
         return $products;
     }
 
-    static public function addProduct($company, $product_nmae, $price, $quant){
-        if($company != '' && $product_nmae != '' && $price != '' && $quant != ''){
-            $new_product = $company."::".$product_nmae."::".$price."::".$quant."\n";
+    static public function addProduct($company, $product_name, $price, $quant){
+        if($company != '' && $product_name != '' && $price != '' && $quant != ''){
+            $new_product = $company."::".$product_name."::".$price."::".$quant."\n";
             file_put_contents(__DIR__.'/../data/product.txt', $new_product, FILE_APPEND);
-        }else {
-            return "<script>alert('Заполните все поля!');</script>";
         }
 
     }
@@ -32,4 +30,5 @@ class Data {
         file_put_contents(__DIR__.'/../data/product.txt', $upd_file);
     }
 
+    
 }
