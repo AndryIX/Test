@@ -2,4 +2,3 @@ Apple::iPhone 14 256GB::130999::123
 Apple::iPhone 15 256GB::150000::34213
 Apple::iPhone 15 256GB::130999::124
 Xaiomi::Redmi note 8::20000::235
-Apple::iPhone 15 256GB::412352354::1234
