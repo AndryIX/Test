@@ -2,8 +2,8 @@ window.onload = () => {
     viewProducts()
 }
 
-function sendGetRequest(url) {
-    return fetch(url).then(response => {
+async function sendGetRequest(url) {
+    return await fetch(url).then(response => {
         if (response.ok) {
             return response.json()
         }
@@ -15,12 +15,12 @@ function sendGetRequest(url) {
     })
 }
 
-function sendRequest(method, url, body) {
+async function sendRequest(method, url, body) {
     const headers = {
         'Content-Type': 'application/json'
     }
 
-    return fetch(url, {
+    return await fetch(url, {
         method: method,
         body: JSON.stringify(body),
         headers: headers
@@ -72,10 +72,12 @@ function delProduct(id) {
     if (confirm('Удалить запись?')) {
         body = { id: id }
         sendRequest('DELETE', '/action/delProduct.php', body)
-            .then(data => console.log(data))
+            .then(data = () => {
+                console.log(data)
+                clearProducts()
+                viewProducts()
+            })
             .catch(err => console.log(err))
-        clearProducts()
-        viewProducts()
     }
 }
 
@@ -87,8 +89,11 @@ document.getElementById('btn_add').onclick = () => {
         quant: document.getElementById('quant').value
     }
     sendRequest('POST', '/action/addProduct.php', body)
-        .then(data => console.log(data))
+        .then(data = () => {
+            console.log(data)
+            clearProducts()
+            viewProducts()
+        })
         .catch(err => console.log(err))
-    clearProducts()
-    viewProducts()
+
 }
